@@ -1,8 +1,8 @@
-import React from 'react' ;
-import { withStyles } from "@material-ui/core" ;
-import TextField from '@material-ui/core/TextField' ;
-import style from './style' ;
-import PropTypes from 'prop-types' ;
+import React from "react";
+import { withStyles } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
+import style from "./style";
+import PropTypes from "prop-types";
 const renderTextField = ({
   label,
   input,
@@ -17,10 +17,10 @@ const renderTextField = ({
     {...input}
     {...custom}
   />
-)
-renderTextField.propTypes ={
-  label :PropTypes.string ,
-  import : PropTypes.object ,
-  meta : PropTypes.object
-}
-export default withStyles(style)(renderTextField)
+);
+renderTextField.propTypes = {
+  label: PropTypes.string,
+  import: PropTypes.object,
+  meta: PropTypes.object,
+};
+export default withStyles(style)(renderTextField);

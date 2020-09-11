@@ -13,13 +13,13 @@ class TaskItem extends Component {
   onUpdateTask = (task) => {
     this.props.onUpdateTask(task);
   };
-  handleDelTask = (task)=>{
-    this.props.handleDelTask(task) ;
-  }
+  handleDelTask = (task) => {
+    this.props.handleDelTask(task);
+  };
   render() {
-    const { task, status , classes } = this.props;
+    const { task, status, classes } = this.props;
     return (
-      <Card key={task.status} className = {classes.item}>
+      <Card key={task.status} className={classes.item}>
         <CardContent>
           <Grid
             container
@@ -43,8 +43,11 @@ class TaskItem extends Component {
             justify="flex-end"
             alignItems="flex-end"
           >
-            <Fab color="primary" aria-label="add" size="small"
-            onClick = {()=>this.handleDelTask(task)}
+            <Fab
+              color="primary"
+              aria-label="add"
+              size="small"
+              onClick={() => this.handleDelTask(task)}
             >
               <DeleteIcon />
             </Fab>

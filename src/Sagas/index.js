@@ -18,8 +18,8 @@ import {
   add_task_err,
   update_task_success,
   update_task_err,
-  del_task_success ,
-  del_task_err
+  del_task_success,
+  del_task_err,
 } from "../Redux/Actions/Task";
 import { showLoading, hideLoading } from "../Redux/Actions/ui";
 /*
@@ -99,8 +99,8 @@ function* delTaskSaga(data) {
   } else {
     yield put(del_task_err("404"));
   }
-  yield delay(500) ;
-  yield put(hideLoading()) ;
+  yield delay(500);
+  yield put(hideLoading());
 }
 function* rootSaga() {
   yield fork(watchFetchListTaskACtion);

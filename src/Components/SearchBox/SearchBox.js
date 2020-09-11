@@ -5,7 +5,7 @@ import TextField from "@material-ui/core/TextField";
 import PropTypes from "prop-types";
 class SearchBox extends Component {
   render() {
-    const { classes , searchName } = this.props;
+    const { classes, searchName } = this.props;
 
     return (
       <div className={classes.searchBox}>
@@ -17,8 +17,8 @@ class SearchBox extends Component {
             placeholder="Search Box ..."
             onChange={this.props.handleChange}
             autoComplete="off"
-            value = {searchName}
-            name = 'name'
+            value={searchName}
+            name="name"
           />
         </form>
       </div>

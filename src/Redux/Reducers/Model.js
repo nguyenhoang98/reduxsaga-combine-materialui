@@ -3,7 +3,7 @@ import * as types from "../../Constants/modal";
 var initialState = {
   showModel: false,
   component: null,
-  title: ""
+  title: "",
 };
 
 var reducers = (state = initialState, action) => {

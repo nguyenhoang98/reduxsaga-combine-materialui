@@ -8,6 +8,9 @@ import ListItem from "@material-ui/core/ListItem";
 import propTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 class SideBar extends Component {
+  toggleDrawer() {
+    this.props.toggleDrawer();
+  }
   renderList() {
     const { classes } = this.props;
     let xhtml = null;
@@ -35,7 +38,7 @@ class SideBar extends Component {
     return xhtml;
   }
   render() {
-    const { classes , toggleSideBar } = this.props;
+    const { classes, toggleSideBar } = this.props;
     return (
       <Drawer
         open={toggleSideBar}

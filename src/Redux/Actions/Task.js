@@ -70,14 +70,14 @@ export const edittingModel = (task) => {
   };
 };
 
-export const update_add_task = (title, description , status = 0 , id) => {
+export const update_add_task = (title, description, status = 0, id) => {
   return {
     type: taskConstants.UPDATE_TASK,
     payload: {
       title,
       description,
-      status ,
-      id
+      status,
+      id,
     },
   };
 };
@@ -100,29 +100,28 @@ export const update_task_err = (err) => {
   };
 };
 
-export const del_task = (task)=>{
+export const del_task = (task) => {
   return {
-    type : taskConstants.DEL_TASK ,
-    payload : {
-      task
-    }
-  }
-}
-export const del_task_success = (id)=>{
+    type: taskConstants.DEL_TASK,
+    payload: {
+      task,
+    },
+  };
+};
+export const del_task_success = (id) => {
   return {
-    type : taskConstants.DEL_TASK_SUCCESS ,
-    payload : {
-      id
-    }
-  }
-}
+    type: taskConstants.DEL_TASK_SUCCESS,
+    payload: {
+      id,
+    },
+  };
+};
 
-export const del_task_err = (err)=>{
+export const del_task_err = (err) => {
   return {
-    type : taskConstants.DEL_TASK_ERR ,
-    payload : {
-      err
-    }
-  }
-}
-
+    type: taskConstants.DEL_TASK_ERR,
+    payload: {
+      err,
+    },
+  };
+};

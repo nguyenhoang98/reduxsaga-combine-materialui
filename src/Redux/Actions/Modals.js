@@ -14,7 +14,7 @@ export const changeModelContent = (component) => {
   return {
     type: modelTypes.CHANGE_MODAL_CONTENT,
     payload: {
-      component,
+      component : component
     },
   };
 };
@@ -22,7 +22,7 @@ export const changeModelTitle = (title) => {
   return {
     type: modelTypes.CHANGE_MODAL_TITLE,
     payload: {
-      title,
+      title : title
     },
   };
 };

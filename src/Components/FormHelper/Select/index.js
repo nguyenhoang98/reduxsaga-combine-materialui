@@ -14,15 +14,15 @@ const renderFromHelper = ({ touched, error }) => {
   }
 };
 const renderSelectField = ({
-  classes ,
+  classes,
   input,
   label,
   meta: { touched, error },
   children,
   ...custom
 }) => (
-  <FormControl error={touched && error} className = {classes.FormControl}>
-<InputLabel htmlFor="age-native-simple">Trang Thái</InputLabel>
+  <FormControl error={touched && error} className={classes.FormControl}>
+    <InputLabel htmlFor="age-native-simple">Trang Thái</InputLabel>
     <Select
       {...input}
       {...custom}
@@ -30,7 +30,7 @@ const renderSelectField = ({
         name: "age",
         id: "age-native-simple",
       }}
-      value = {input.value}
+      value={input.value}
     >
       {children}
     </Select>
@@ -38,14 +38,14 @@ const renderSelectField = ({
   </FormControl>
 );
 renderFromHelper.propTypes = {
-  touched : PropTypes.bool ,
-  error : PropTypes.bool
-}
+  touched: PropTypes.bool,
+  error: PropTypes.bool,
+};
 renderSelectField.propTypes = {
   label: PropTypes.string,
   import: PropTypes.object,
   meta: PropTypes.object,
-  children : PropTypes.array ,
-  classes : PropTypes.object
+  children: PropTypes.array,
+  classes: PropTypes.object,
 };
 export default withStyles(style)(renderSelectField);

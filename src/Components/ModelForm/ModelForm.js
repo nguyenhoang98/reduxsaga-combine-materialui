@@ -35,14 +35,14 @@ ModelForm.propTypes = {
     hidenModal: PropTypes.func,
   }),
 };
-var mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     title: state.model.title,
     open: state.model.showModel,
     component: state.model.component,
   };
 };
-var mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     modelActionCreator: bindActionCreators(modelAction, dispatch),
   };

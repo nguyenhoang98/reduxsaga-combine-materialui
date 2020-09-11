@@ -1,7 +1,4 @@
-
-const style = (theme)=>{
-    return{
-
-    }
-}
-export default style ;
+const style = (theme) => {
+  return {};
+};
+export default style;

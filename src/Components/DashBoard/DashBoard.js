@@ -38,7 +38,7 @@ class DashBoard extends Component {
           />
           <div
             className={classNames(classes.wrapperContent, {
-              [classes.wrapperContentLeft] : toggleSideBar === false
+              [classes.wrapperContentLeft]: toggleSideBar === false,
             })}
           >
             {children}

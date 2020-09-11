@@ -1,7 +1,4 @@
-
 const style = () => {
-   return {
-
-   }
-}
+  return {};
+};
 export default style;

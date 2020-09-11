@@ -99,7 +99,9 @@ class TaskBoard extends Component {
     changeModelContent(
       <div className={classes.box}>
         <Box className={classes.title} mt={2} mb={2}>
-          Bạn Có Muốn Xóa <span className = {classes.modalConfigTextBold}>{ task.title }</span> Này Không ?
+          Bạn Có Muốn Xóa{" "}
+          <span className={classes.modalConfigTextBold}>{task.title}</span> Này
+          Không ?
         </Box>
         <Box className={classes.aciton}>
           <Grid

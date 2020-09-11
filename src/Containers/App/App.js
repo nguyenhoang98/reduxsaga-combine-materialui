@@ -22,22 +22,22 @@ class App extends Component {
         <Router>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-              <Switch>
-                {admin_routers.map((value) => {
-                  return (
-                    <AdminLayoutRoute
-                      key={value.path}
-                      path={value.path}
-                      component={value.component}
-                      name={value.name}
-                      exact={value.exact}
-                    />
-                  );
-                })}
-              </Switch>
-              <ToastContainer />
-              <GlobalLoading />
-              <ModelForm />
+            <Switch>
+              {admin_routers.map((value) => {
+                return (
+                  <AdminLayoutRoute
+                    key={value.path}
+                    path={value.path}
+                    component={value.component}
+                    name={value.name}
+                    exact={value.exact}
+                  />
+                );
+              })}
+            </Switch>
+            <ToastContainer />
+            <GlobalLoading />
+            <ModelForm />
           </ThemeProvider>
         </Router>
       </Provider>

@@ -6,16 +6,6 @@ import { bindActionCreators, compose } from "redux";
 import { connect } from "react-redux";
 import * as uiAction from "../../Redux/Actions/ui";
 class GlobalLoading extends Component {
-  // componentDidMount() {
-  //   const { uiAction } = this.props;
-  //   const { showLoading } = uiAction;
-  //   showLoading();
-  // }
-  // componentWillUnmount() {
-  //   const { uiAction } = this.props;
-  //   const { hideLoading } = uiAction;
-  //   hideLoading();
-  // }
   render() {
     const { classes, showLoading } = this.props;
     if (showLoading) {
@@ -25,10 +15,9 @@ class GlobalLoading extends Component {
             <img src={loading} className={classes.img} alt="loading" />
           </div>
         </div>
-      )
-    }
-    else{
-      return '' ;
+      );
+    } else {
+      return "";
     }
   }
 }

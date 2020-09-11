@@ -1,7 +1,6 @@
-import React from 'react' ;
-import AdminHomePage from '../Containers/AdminHomePage/AdminHomePage' ;
-import TaskBoard from '../Containers/TaskBoard';
-
+import React from "react";
+import AdminHomePage from "../Containers/AdminHomePage/AdminHomePage";
+import TaskBoard from "../Containers/TaskBoard";
 
 export const API_ENDPOINT = "http://localhost:8888";
 export const STATUSES = [
@@ -25,18 +24,17 @@ export const STATUS_CODE = {
   UPDATED: 202,
 };
 
-
 export const admin_routers = [
   {
-    path : '/' ,
-    component : ()=><AdminHomePage /> ,
-    exact : true ,
-    name : 'Trang Quản Trị '
-  } ,
+    path: "/",
+    component: () => <AdminHomePage />,
+    exact: true,
+    name: "Trang Quản Trị ",
+  },
   {
-    path : '/task-board' ,
-    component : ()=><TaskBoard /> ,
-    exact : true ,
-    name : 'Quản Lí Công Việc'
-  } ,
-]
+    path: "/task-board",
+    component: () => <TaskBoard />,
+    exact: true,
+    name: "Quản Lí Công Việc",
+  },
+];

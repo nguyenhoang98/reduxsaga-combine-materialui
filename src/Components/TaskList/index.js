@@ -7,7 +7,7 @@ import ListItem from "../TaskItem/index";
 import PropTypes from "prop-types";
 class TaskList extends Component {
   render() {
-    const { listfilter, status, onUpdateTask , handleDelTask } = this.props;
+    const { listfilter, status, onUpdateTask, handleDelTask } = this.props;
     return (
       <Grid key={status.value} item xs={12} sm={4}>
         <Box mt={2} mb={2}>
@@ -21,7 +21,7 @@ class TaskList extends Component {
                 status={status}
                 key={task.id}
                 onUpdateTask={onUpdateTask}
-                handleDelTask = {handleDelTask}
+                handleDelTask={handleDelTask}
               />
             );
           })}

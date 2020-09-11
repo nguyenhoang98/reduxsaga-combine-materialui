@@ -12,7 +12,7 @@ import * as taskAction from "../../Redux/Actions/Task";
 import { Field, reduxForm } from "redux-form";
 import renderTextField from "../../Components/FormHelper/TextField";
 import renderSelectField from "../../Components/FormHelper/Select";
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from "@material-ui/core/MenuItem";
 import validate from "./validate";
 
 class TaskForm extends Component {
@@ -20,14 +20,13 @@ class TaskForm extends Component {
     const { modelActionCreator } = this.props;
     const { hidenModal } = modelActionCreator;
     const { taskActionCreator } = this.props;
-    const { add_task , update_add_task } = taskActionCreator;
+    const { add_task, update_add_task } = taskActionCreator;
     const { title, description } = data;
-    if(data.id === ''){
+    if (data.id === "") {
       add_task(title, description);
-    }
-    else{
-      const { title, description , status , id } = data;
-      update_add_task(title , description ,status , id ) ;
+    } else {
+      const { title, description, status, id } = data;
+      update_add_task(title, description, status, id);
     }
     hidenModal();
   };
@@ -41,7 +40,7 @@ class TaskForm extends Component {
     } = this.props;
     const { hidenModal } = modelActionCreator;
     const { task } = this.props;
-    console.log('task : ' , task) ;
+    console.log("task : ", task);
     return (
       <form onSubmit={handleSubmit(this.handleOnsubmitForm)}>
         <Grid container>

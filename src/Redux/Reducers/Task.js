@@ -23,7 +23,6 @@ var reducers = (state = initialState, action) => {
   }
   if (action.type === taskConstants.FETCH_TASK_FAILED) {
     const { err } = action.payload;
-    console.log(err);
     toastError(err);
   }
 
@@ -70,12 +69,10 @@ var reducers = (state = initialState, action) => {
   }
   if (action.type === taskConstants.DEL_TASK_SUCCESS) {
     const { id } = action.payload;
-    console.log(id);
     let index = state.listTask.findIndex((task) => {
       return task.id === id;
     });
     state.listTask.splice(index, 1);
-    console.log("index: ", index);
     delSuccess("Xóa thành Công");
     return {
       ...state,
